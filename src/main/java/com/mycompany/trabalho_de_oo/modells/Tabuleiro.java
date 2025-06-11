@@ -15,7 +15,7 @@ public class Tabuleiro {
 
     public void posicionarPersonagem(Personagem personagem, int x, int y) {
         if (posicaoValida(x, y)) {
-            System.out.println("Posicionando " + personagem.getNome() + " na posicao (" + x + 1 + ", " + y + 1 + ")");
+            System.out.println("Posicionando " + personagem.getNome() + " na posicao (" + (x + 1) + ", " + (y + 1) + ")");
             personagem.setPosicaoX(x);
             personagem.setPosicaoY(y);
             grade[x][y] = personagem;
@@ -46,7 +46,7 @@ public class Tabuleiro {
         
         System.out.print("    ");
         for (int i = 0; i < TAMANHO; i++) {
-            System.out.print(i < 9 ? " " + i + "  " : i + "  ");
+            System.out.print(i <= 9 ? " " + (i + 1) + "  " : i + "  ");
         }
         System.out.println();
 

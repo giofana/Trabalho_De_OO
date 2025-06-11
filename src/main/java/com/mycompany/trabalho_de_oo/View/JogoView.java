@@ -68,9 +68,12 @@ public class JogoView {
 
         while(!tipoValido) {
             System.out.println("Selecione o tipo de personagem:");
-            System.out.println("1. Arqueiro");
-            System.out.println("2. Guerreiro");
-            System.out.println("3. Mago");
+            System.out.println("1. Arqueiro - Ataque: 8, Defesa: 5, Alcance: 5");
+            System.out.println("   (Aumenta o alcance de ataque em 1)");
+            System.out.println("2. Guerreiro - Ataque: 15, Defesa: 10, Alcance: 1");
+            System.out.println("   (Duplica o ataque)");
+            System.out.println("3. Mago - Ataque: 10, Defesa: 7, Alcance: 3");
+            System.out.println("   (Pode trocar pontos de vida com o oponente)");
             String entrada = scanner.nextLine();
             try {
                 tipo = Integer.parseInt(entrada);

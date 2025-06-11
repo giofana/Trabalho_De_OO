@@ -43,13 +43,13 @@ public abstract class Personagem {
         int novaY = posicaoY + deltaY;
         
         if(tabuleiro.posicaoValida(novaX, novaY)) {
-            System.out.println("Movendo personagem " + nome + " de (" + posicaoX + 1 + ", " + posicaoY + 1 + ") para (" + novaX + 1 + ", " + novaY + 1 + ")");
+            System.out.println("Movendo personagem " + nome + " de (" + (posicaoX + 1) + ", " + (posicaoY + 1) + ") para (" + (novaX + 1) + ", " + (novaY + 1) + ")");
             tabuleiro.moverPersonagem(this, novaX, novaY);
             this.posicaoX = novaX;
             this.posicaoY = novaY;
             return true;
         }
-        System.out.println("Movimento inválido para " + nome + " de (" + posicaoX + 1 + ", " + posicaoY + 1 + ") para (" + novaX + 1 + ", " + novaY + 1 + ")");
+        System.out.println("Movimento inválido para " + nome + " de (" + (posicaoX + 1) + ", " + (posicaoY + 1) + ") para (" + (novaX + 1) + ", " + (novaY + 1) + ")");
         return false;
     }
 
