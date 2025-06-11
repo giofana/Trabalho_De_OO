@@ -46,11 +46,9 @@ public class JogoController {
 
         System.out.println("Turno de " + jogadorAtual.getNome() + ". Aja com sabedoria!");
 
-        System.out.println("Pressione 'Enter' para iniciar o turno.");
         try {
-            System.in.read();
-            System.in.skip(System.in.available());
-        } catch (Exception e) {
+            Thread.sleep(2000); 
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
@@ -117,15 +115,20 @@ public class JogoController {
         if (jogoEmAndamento) {
             if (jogadorAtual instanceof Bot) {
                 System.out.println("Pressione 'Enter' para finalizar o turno do Bot.");
+                try {
+                    System.in.read();
+                    System.in.skip(System.in.available());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             } else {
-                System.out.println("Pressione 'Enter' para finalizar o seu turno.");
+                try {
+                Thread.sleep(2000); 
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
-            try {
-                System.in.read();
-                System.in.skip(System.in.available());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            
             alternarTurno();
         }
     }
