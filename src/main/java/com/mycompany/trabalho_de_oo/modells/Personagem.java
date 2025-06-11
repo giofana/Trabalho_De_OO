@@ -29,7 +29,7 @@ public abstract class Personagem {
         oponente.setForcaDeDefesa(oponente.getForcaDeDefesa() - this.forcaDeAtaque);
     }
 
-    public void defender(int dano){
+    public void defender(){
         this.forcaDeDefesa = this.defesaInicial;
     }
 
