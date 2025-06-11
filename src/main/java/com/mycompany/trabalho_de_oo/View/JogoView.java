@@ -222,7 +222,7 @@ public class JogoView {
     }
 
     public void solicitarNovaAcao() {
-        processarTurnoJogador(); // Reexibe o menu original
+        processarTurnoJogador();
     }
 
 

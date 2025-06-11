@@ -1,7 +1,5 @@
 package com.mycompany.trabalho_de_oo;
 
-import java.util.Scanner;
-
 import com.mycompany.trabalho_de_oo.View.JogoView;
 
 public class App {

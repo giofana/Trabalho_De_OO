@@ -21,7 +21,6 @@ public class JogoController {
         this.jogoEmAndamento = true;
         this.jogadorAtual = jogador1;
 
-        // Posicionar personagens aleatoriamente
         posicionarPersonagensAleatoriamente();
     }
 
@@ -46,6 +45,14 @@ public class JogoController {
         System.out.println("Personagens posicionados no tabuleiro.");
 
         System.out.println("Turno de " + jogadorAtual.getNome() + ". Aja com sabedoria!");
+
+        System.out.println("Pressione 'Enter' para iniciar o turno.");
+        try {
+            System.in.read();
+            System.in.skip(System.in.available());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public boolean isJogoEmAndamento() {

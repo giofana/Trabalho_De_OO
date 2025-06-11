@@ -43,7 +43,7 @@ public class Tabuleiro {
     }
 
     public void imprimirTabuleiro(Personagem jogador1, Personagem jogador2) {
-        // Cabeçalho com coordenadas
+        
         System.out.print("   ");
         for (int i = 0; i < TAMANHO; i++) {
             System.out.print(" " + i + "  ");
@@ -51,37 +51,33 @@ public class Tabuleiro {
         System.out.println();
 
         for (int i = 0; i < TAMANHO; i++) {
-            // Linha horizontal superior
+
             System.out.print("  +");
             for (int j = 0; j < TAMANHO; j++) {
                 System.out.print("---" + (j < TAMANHO-1 ? "+" : "+"));
             }
             System.out.println();
 
-            // Número da linha
             System.out.print((i) + " |");
 
-            // Conteúdo da linha
             for (int j = 0; j < TAMANHO; j++) {
                 if (grade[j][i] == jogador1) {
-                    System.out.print(" 1 |"); // Jogador 1
+                    System.out.print(" 1 |"); 
                 } else if (grade[j][i] == jogador2) {
-                    System.out.print(" 2 |"); // Jogador 2
+                    System.out.print(" 2 |");
                 } else {
-                    System.out.print("   |"); // Espaço vazio
+                    System.out.print("   |"); 
                 }
             }
             System.out.println();
         }
 
-        // Linha horizontal inferior
         System.out.print("  +");
         for (int j = 0; j < TAMANHO; j++) {
             System.out.print("---" + (j < TAMANHO-1 ? "+" : "+"));
         }
         System.out.println();
 
-        // Legenda
-        System.out.println("1 - Jogador 1 | 2 - Jogador 2");
+        System.out.println("1 - " + jogador1.getNome() + " | 2 - " + jogador2.getNome());
     }
 }
