@@ -9,5 +9,6 @@ public class Mago extends Personagem {
         int vidaOponente = oponente.getPontosDeVida();
         oponente.setPontosDeVida(this.getPontosDeVida());
         this.setPontosDeVida(vidaOponente);
+        System.out.println(this.getNome() + " usou seu poder especial, trocando pontos de vida com " + oponente.getNome() + ".");
     }
 }

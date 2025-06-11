@@ -7,6 +7,7 @@ public class Arqueiro extends Personagem {
     @Override
     public void usarPoderEspecial(Personagem oponente) {
         this.setAlcanceDeAtaque(this.getAlcanceDeAtaque() + 1);
+        
     }
 
 }

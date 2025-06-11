@@ -10,4 +10,22 @@
         <maven.compiler.release>21</maven.compiler.release>
         <exec.mainClass>com.mycompany.trabalho_de_oo.Main</exec.mainClass>
     </properties>
+
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.3.0</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>com.mycompany.trabalho_de_oo.Main</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
 </project>
