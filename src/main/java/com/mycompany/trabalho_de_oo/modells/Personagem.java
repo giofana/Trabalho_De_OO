@@ -39,9 +39,9 @@ public abstract class Personagem {
         
         if(tabuleiro.posicaoValida(novaX, novaY)) {
             System.out.println("Movendo personagem " + nome + " de (" + posicaoX + ", " + posicaoY + ") para (" + novaX + ", " + novaY + ")");
+            tabuleiro.moverPersonagem(this, novaX, novaY);
             this.posicaoX = novaX;
             this.posicaoY = novaY;
-            tabuleiro.moverPersonagem(this, novaX, novaY); //Aqui atualizamos a posição do personagem no tabuleiro
             return true;
         }
         System.out.println("Movimento inválido para " + nome + " de (" + posicaoX + ", " + posicaoY + ") para (" + novaX + ", " + novaY + ")");

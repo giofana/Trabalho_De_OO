@@ -74,21 +74,18 @@ public class JogoController {
         switch (acao.toUpperCase()) {
             case "MOVER":
                 if (jogadorAtual instanceof Bot) {
-                    // Obtém posições do Bot e do oponente
                     int botX = personagemAtual.getPosicaoX();
                     int botY = personagemAtual.getPosicaoY();
                     int oponenteX = oponente.getPosicaoX();
                     int oponenteY = oponente.getPosicaoY();
 
-                    // Calcula a direção ideal
                     int deltaX = Integer.compare(oponenteX - botX, 0);
                     int deltaY = Integer.compare(oponenteY - botY, 0);
 
-                    // Verifica se vai mover horizontal ou verticalmente
                     if (Math.abs(deltaX) > Math.abs(deltaY)) {
-                        deltaY = 0; // Mover apenas na horizontal
+                        deltaY = 0;
                     } else {
-                        deltaX = 0; // Mover apenas na vertical
+                        deltaX = 0;
                     }
 
                     if (tabuleiro.posicaoValida(personagemAtual.getPosicaoX() + deltaX, personagemAtual.getPosicaoY() + deltaY)) {
