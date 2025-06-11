@@ -15,7 +15,7 @@ public class Tabuleiro {
 
     public void posicionarPersonagem(Personagem personagem, int x, int y) {
         if (posicaoValida(x, y)) {
-            System.out.println("Posicionando " + personagem.getNome() + " na posicao (" + x + ", " + y + ")");
+            System.out.println("Posicionando " + personagem.getNome() + " na posicao (" + x + 1 + ", " + y + 1 + ")");
             personagem.setPosicaoX(x);
             personagem.setPosicaoY(y);
             grade[x][y] = personagem;
@@ -44,21 +44,21 @@ public class Tabuleiro {
 
     public void imprimirTabuleiro(Personagem jogador1, Personagem jogador2) {
         
-        System.out.print("   ");
+        System.out.print("    ");
         for (int i = 0; i < TAMANHO; i++) {
-            System.out.print(" " + i + "  ");
+            System.out.print(i < 9 ? " " + i + "  " : i + "  ");
         }
         System.out.println();
 
         for (int i = 0; i < TAMANHO; i++) {
 
-            System.out.print("  +");
+            System.out.print("   +");
             for (int j = 0; j < TAMANHO; j++) {
                 System.out.print("---" + (j < TAMANHO-1 ? "+" : "+"));
             }
             System.out.println();
 
-            System.out.print((i) + " |");
+            System.out.print(i < 9 ? " " + (i + 1) + " |" : (i + 1) + " |");
 
             for (int j = 0; j < TAMANHO; j++) {
                 if (grade[j][i] == jogador1) {
@@ -72,7 +72,7 @@ public class Tabuleiro {
             System.out.println();
         }
 
-        System.out.print("  +");
+        System.out.print("   +");
         for (int j = 0; j < TAMANHO; j++) {
             System.out.print("---" + (j < TAMANHO-1 ? "+" : "+"));
         }

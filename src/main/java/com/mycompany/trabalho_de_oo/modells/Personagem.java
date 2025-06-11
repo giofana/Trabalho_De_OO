@@ -25,12 +25,17 @@ public abstract class Personagem {
         int dano = Math.max(0, this.forcaDeAtaque - oponente.getForcaDeDefesa());
         oponente.setPontosDeVida(oponente.getPontosDeVida() - dano);
         System.out.println(this.nome + " atacou " + oponente.getNome() + " causando " + dano + " de dano.");
-        System.out.println(oponente.getNome() + " agora tem " + oponente.getPontosDeVida() + " pontos de vida.");
-        oponente.setForcaDeDefesa(oponente.getForcaDeDefesa() - this.forcaDeAtaque);
+        if(dano > 0) {
+            System.out.println(oponente.getNome() + " agora tem " + oponente.getPontosDeVida() + " pontos de vida.");
+        } else {
+            System.out.println(oponente.getNome() + " conseguiu se defender completamente do ataque de " + this.nome + ".");
+        }
+        oponente.setForcaDeDefesa(Math.max(0, oponente.getForcaDeDefesa() - this.forcaDeAtaque));
     }
 
     public void defender(){
         this.forcaDeDefesa = this.defesaInicial;
+        System.out.println(this.nome + " se defendeu, restaurando sua força de defesa para " + this.forcaDeDefesa + ".");
     }
 
     public boolean mover(int deltaX, int deltaY, Tabuleiro tabuleiro) {
@@ -38,13 +43,13 @@ public abstract class Personagem {
         int novaY = posicaoY + deltaY;
         
         if(tabuleiro.posicaoValida(novaX, novaY)) {
-            System.out.println("Movendo personagem " + nome + " de (" + posicaoX + ", " + posicaoY + ") para (" + novaX + ", " + novaY + ")");
+            System.out.println("Movendo personagem " + nome + " de (" + posicaoX + 1 + ", " + posicaoY + 1 + ") para (" + novaX + 1 + ", " + novaY + 1 + ")");
             tabuleiro.moverPersonagem(this, novaX, novaY);
             this.posicaoX = novaX;
             this.posicaoY = novaY;
             return true;
         }
-        System.out.println("Movimento inválido para " + nome + " de (" + posicaoX + ", " + posicaoY + ") para (" + novaX + ", " + novaY + ")");
+        System.out.println("Movimento inválido para " + nome + " de (" + posicaoX + 1 + ", " + posicaoY + 1 + ") para (" + novaX + 1 + ", " + novaY + 1 + ")");
         return false;
     }
 

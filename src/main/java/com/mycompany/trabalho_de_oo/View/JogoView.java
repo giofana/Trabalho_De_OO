@@ -58,6 +58,9 @@ public class JogoView {
     }
 
     private Jogador criarJogador(int numero) {
+        System.out.print("Nome do personagem: ");
+        String nomePersonagem = scanner.nextLine();
+
         System.out.print("Nome do jogador " + numero + ": ");
         String nomeJogador = scanner.nextLine();
         boolean tipoValido = false;
@@ -80,9 +83,6 @@ public class JogoView {
                 System.out.println("Entrada invalida. Por favor, digite um numero (1, 2 ou 3).\n");
             }
         }
-
-        System.out.print("Nome do personagem: ");
-        String nomePersonagem = scanner.nextLine();
 
         Personagem personagem;
         switch (tipo) {
@@ -111,15 +111,15 @@ public class JogoView {
         
         switch (tipo) {
             case 1:
-                nomePersonagem = "Arqueiro Automatico";
+                nomePersonagem = "Arqueiro";
                 personagem = new Arqueiro(nomePersonagem);
                 break;
             case 2:
-                nomePersonagem = "Guerreiro Automatico";
+                nomePersonagem = "Guerreiro";
                 personagem = new Guerreiro(nomePersonagem);
                 break;
             case 3:
-                nomePersonagem = "Mago Automatico";
+                nomePersonagem = "Mago";
                 personagem = new Mago(nomePersonagem);
                 break;
             default:
