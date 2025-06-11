@@ -48,7 +48,6 @@ public abstract class Personagem {
         return false;
     }
 
-    // Getters e Setters
     public String getNome() { return nome; }
     public int getPontosDeVida() { return pontosDeVida; }
     public int getForcaDeAtaque() { return forcaDeAtaque; }

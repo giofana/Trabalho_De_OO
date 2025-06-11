@@ -89,13 +89,12 @@ public class JogoController {
                     }
 
                     if (tabuleiro.posicaoValida(personagemAtual.getPosicaoX() + deltaX, personagemAtual.getPosicaoY() + deltaY)) {
-                        // personagemAtual.mover(deltaX, deltaY, tabuleiro);
                         tabuleiro.moverPersonagem(personagemAtual, personagemAtual.getPosicaoX() + deltaX, personagemAtual.getPosicaoY() + deltaY);
                     } else {
                         System.out.println("Movimento invalido. Tente novamente.");
                     }
                     tabuleiro.imprimirTabuleiro(jogador1.getPersonagem(), jogador2.getPersonagem());
-                    System.out.println("Voce se moveu para a posicao: (" + personagemAtual.getPosicaoX() + ", " + personagemAtual.getPosicaoY() + ")");
+                    System.out.println(personagemAtual.getNome() + " se moveu para a posicao: (" + personagemAtual.getPosicaoX() + ", " + personagemAtual.getPosicaoY() + ")");
                 }
                 break;
             case "ATACAR":

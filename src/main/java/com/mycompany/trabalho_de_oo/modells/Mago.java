@@ -6,10 +6,8 @@ public class Mago extends Personagem {
 
     @Override
     public void usarPoderEspecial(Personagem oponente){
-        int vidaMago = this.getPontosDeVida();
         int vidaOponente = oponente.getPontosDeVida();
-        int vidaRestaurada = (vidaMago + vidaOponente) / 2;
-        this.setPontosDeVida(vidaRestaurada);
-        oponente.setPontosDeVida(vidaRestaurada);
+        oponente.setPontosDeVida(this.getPontosDeVida());
+        this.setPontosDeVida(vidaOponente);
     }
 }
