@@ -8,6 +8,7 @@ public class Guerreiro extends Personagem {
     @Override
     public void usarPoderEspecial(Personagem oponente) {
         this.setForcaDeAtaque(Math.min(30, this.getForcaDeAtaque() * 2));
+        System.out.println(this.getNome() + " usou seu poder especial, dobrando sua força de ataque para " + this.getForcaDeAtaque() + ".");
     }
     
 }
