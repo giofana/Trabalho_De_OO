@@ -1,4 +1,4 @@
-package com.mycompany.trabalho_de_oo.View;
+package com.mycompany.trabalho_de_oo.view;
 import java.util.Scanner;
 
 import com.mycompany.trabalho_de_oo.controller.JogoController;

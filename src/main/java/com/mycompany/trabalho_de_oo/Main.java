@@ -5,7 +5,7 @@
 
 package com.mycompany.trabalho_de_oo;
 
-import com.mycompany.trabalho_de_oo.View.JogoView;
+import com.mycompany.trabalho_de_oo.view.JogoView;
 
 public class Main {
     public static void main(String[] args) {

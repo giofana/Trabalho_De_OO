@@ -92,7 +92,7 @@ public class JogoController {
                         System.out.println("Movimento invalido. Tente novamente.");
                     }
                     tabuleiro.imprimirTabuleiro(jogador1.getPersonagem(), jogador2.getPersonagem());
-                    System.out.println(personagemAtual.getNome() + " se moveu para a posicao: (" + personagemAtual.getPosicaoX() + 1 + ", " + personagemAtual.getPosicaoY() + 1 + ")");
+                    System.out.println(personagemAtual.getNome() + " se moveu para a posicao: (" + (personagemAtual.getPosicaoX() + 1) + ", " + (personagemAtual.getPosicaoY() + 1) + ")");
                 }
                 break;
             case "ATACAR":
